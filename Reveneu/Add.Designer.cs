@@ -59,6 +59,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -357,16 +358,17 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox6.Location = new System.Drawing.Point(224, 377);
+            this.textBox6.Location = new System.Drawing.Point(224, 386);
             this.textBox6.MaxLength = 6;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(72, 30);
             this.textBox6.TabIndex = 27;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox7.Location = new System.Drawing.Point(224, 413);
+            this.textBox7.Location = new System.Drawing.Point(224, 422);
             this.textBox7.MaxLength = 6;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(72, 30);
@@ -375,11 +377,19 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox8.Location = new System.Drawing.Point(224, 449);
+            this.textBox8.Location = new System.Drawing.Point(224, 458);
             this.textBox8.MaxLength = 6;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(72, 30);
             this.textBox8.TabIndex = 29;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(43, 379);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(305, 117);
+            this.panel1.TabIndex = 30;
             // 
             // Add
             // 
@@ -417,6 +427,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "當日毛利";
@@ -461,5 +472,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Panel panel1;
     }
 }

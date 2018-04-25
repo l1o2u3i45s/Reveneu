@@ -55,6 +55,7 @@ namespace Reveneu
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.排名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +100,8 @@ namespace Reveneu
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.排名});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -175,7 +177,7 @@ namespace Reveneu
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 27);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "調劑台";
+            this.textBox1.Text = "中藥";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
@@ -224,7 +226,7 @@ namespace Reveneu
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 52;
+            this.Column1.Width = 50;
             // 
             // Column2
             // 
@@ -280,6 +282,13 @@ namespace Reveneu
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // 排名
+            // 
+            this.排名.HeaderText = "排名";
+            this.排名.Name = "排名";
+            this.排名.ReadOnly = true;
+            this.排名.Width = 70;
+            // 
             // ChineseMedicineRanking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -330,5 +339,6 @@ namespace Reveneu
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn 排名;
     }
 }
