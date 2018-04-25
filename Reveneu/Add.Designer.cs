@@ -364,6 +364,7 @@
             this.textBox6.Size = new System.Drawing.Size(72, 30);
             this.textBox6.TabIndex = 27;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             // 
             // textBox7
             // 
@@ -373,9 +374,11 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(72, 30);
             this.textBox7.TabIndex = 28;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox8.Location = new System.Drawing.Point(224, 458);
             this.textBox8.MaxLength = 6;

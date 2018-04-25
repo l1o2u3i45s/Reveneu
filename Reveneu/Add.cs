@@ -507,13 +507,34 @@ namespace Reveneu
             {
                 Delete_OTC(vendor_code);
                 Delete_Prescription(vendor_code);
+                Delete_ChineseMedicine();
             }
             catch (Exception e)
             {
                 toolStripStatusLabel1.Text = e.Message.ToString();
             }
         }
+        //刪除當日中藥資料
+        private void Delete_ChineseMedicine()
+        {
+            string str_date = maskedTextBox1.Text.Replace("/", "");
 
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+
+            string SQL = "";
+            SQL = "DELETE FROM TraditionalChineseMedicine WHERE ";
+            SQL += "rpt_date = '" + str_date + "' and ";
+            SQL += "rpt_store = '" + comboBox1.Text.Substring(0,2) + "'";
+
+            MySqlCommand cmd = new MySqlCommand(SQL, conn);
+            cmd.ExecuteNonQuery();
+
+            cmd.Dispose();
+
+            conn.Close();
+            conn.Dispose();
+        }
         // 刪除當日OTC資料
         private void Delete_OTC(string vendor_code)
         {
@@ -699,10 +720,27 @@ namespace Reveneu
 
             button5.Visible = false;
         }
-
+        private void Caculate() {
+            if (textBox6.Text != string.Empty && textBox7.Text != string.Empty)
+                textBox8.Text = (Convert.ToDouble(textBox6.Text) - Convert.ToDouble(textBox7.Text)).ToString();
+        }
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+            Caculate();
+        }
 
+        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Caculate();
+                textBox7.Focus();
+            }
+        }
+        
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            Caculate();
         }
     }
 }
