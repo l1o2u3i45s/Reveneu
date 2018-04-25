@@ -157,5 +157,10 @@ namespace Reveneu
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void 每日毛利ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

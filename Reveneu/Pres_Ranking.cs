@@ -330,7 +330,7 @@ namespace Reveneu
 
                 dataGridView1.Rows[i].Cells[3].Value = myData[2].ToString();  // 總人數
                 dataGridView1.Rows[i].Cells[4].Value = myData[3].ToString();        // 當月毛利
-                dataGridView1.Rows[i].Cells[5].Value = (i + 1).ToString();          // 名次
+                //dataGridView1.Rows[i].Cells[5].Value = (i + 1).ToString();          // 名次
               
 
                 _c1 += double.Parse(myData[1].ToString());
@@ -345,7 +345,7 @@ namespace Reveneu
             dataGridView1.Rows[i].Cells[2].Value = _c2;
             dataGridView1.Rows[i].Cells[3].Value = _c3;
             dataGridView1.Rows[i].Cells[4].Value = _c4;
-            dataGridView1.CurrentCell = dataGridView1.Rows[i].Cells[5];
+            dataGridView1.CurrentCell = dataGridView1.Rows[i].Cells[4];
             myData.Close();
             cmd.Dispose();
 

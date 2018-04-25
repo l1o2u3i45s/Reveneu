@@ -72,6 +72,7 @@
             this.每日毛利ToolStripMenuItem.Name = "每日毛利ToolStripMenuItem";
             this.每日毛利ToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.每日毛利ToolStripMenuItem.Text = "每日毛利";
+            this.每日毛利ToolStripMenuItem.Click += new System.EventHandler(this.每日毛利ToolStripMenuItem_Click);
             // 
             // 新增ToolStripMenuItem
             // 
