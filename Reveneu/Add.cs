@@ -268,7 +268,11 @@ namespace Reveneu
                     
 
                     if (Save_OTC(vendor_code))
+                    {
                         Save_Prescription(vendor_code);
+                        Save_ChugaiMedicine();
+                    }
+                       
                 }
                 else
                 {
@@ -325,7 +329,7 @@ namespace Reveneu
         }
 
         //儲存中藥資料
-        private bool Save_ChugaiMedicine(string vendor_code) {
+        private bool Save_ChugaiMedicine() {
             bool ret_value = false;
 
             string str_date = maskedTextBox1.Text.Replace("/", "");
@@ -336,7 +340,7 @@ namespace Reveneu
                 string SQL = "";
                 SQL = "INSERT INTO TraditionalChineseMedicine VALUES ('";
                 SQL += str_date + "', '";
-                SQL += vendor_code + "', '";
+                SQL += comboBox1.Text.Substring(0,2) + "', '";
                 SQL += textBox5.Text + "', '";
                 SQL += textBox6.Text + "', '";
                 SQL += textBox7.Text + "')";

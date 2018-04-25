@@ -165,7 +165,9 @@ namespace Reveneu
 
         private void 中藥每日排名ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ChineseMedicineRanking cmr = new ChineseMedicineRanking();
+            cmr.MdiParent = this;
+            cmr.Show();
         }
     }
 }

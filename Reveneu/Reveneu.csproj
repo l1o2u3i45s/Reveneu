@@ -61,6 +61,12 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChineseMedicineRanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChineseMedicineRanking.Designer.cs">
+      <DependentUpon>ChineseMedicineRanking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChineseMedicineRanking.resx">
+      <DependentUpon>ChineseMedicineRanking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
