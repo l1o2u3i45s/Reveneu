@@ -37,6 +37,7 @@
             this.OTC歷史資料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.調劑台歷史資料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oTC每日排名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.中藥每日排名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.調劑台每日排名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.排除合作診所每日排名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.目標設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,7 @@
             this.離開ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(781, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(871, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,6 +95,7 @@
             this.OTC歷史資料ToolStripMenuItem,
             this.調劑台歷史資料ToolStripMenuItem,
             this.oTC每日排名ToolStripMenuItem,
+            this.中藥每日排名ToolStripMenuItem,
             this.調劑台每日排名ToolStripMenuItem,
             this.排除合作診所每日排名ToolStripMenuItem});
             this.資料查詢ToolStripMenuItem.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -121,6 +123,13 @@
             this.oTC每日排名ToolStripMenuItem.Size = new System.Drawing.Size(238, 24);
             this.oTC每日排名ToolStripMenuItem.Text = "OTC每日排名";
             this.oTC每日排名ToolStripMenuItem.Click += new System.EventHandler(this.OTC每日排名ToolStripMenuItem_Click);
+            // 
+            // 中藥每日排名ToolStripMenuItem
+            // 
+            this.中藥每日排名ToolStripMenuItem.Name = "中藥每日排名ToolStripMenuItem";
+            this.中藥每日排名ToolStripMenuItem.Size = new System.Drawing.Size(238, 24);
+            this.中藥每日排名ToolStripMenuItem.Text = "中藥每日排名";
+            this.中藥每日排名ToolStripMenuItem.Click += new System.EventHandler(this.中藥每日排名ToolStripMenuItem_Click);
             // 
             // 調劑台每日排名ToolStripMenuItem
             // 
@@ -181,9 +190,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 495);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 755);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(781, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(871, 25);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -201,7 +210,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(781, 520);
+            this.ClientSize = new System.Drawing.Size(871, 780);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -240,6 +249,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem 排除合作診所每日排名ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 不含診所目標ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 中藥每日排名ToolStripMenuItem;
     }
 }
 

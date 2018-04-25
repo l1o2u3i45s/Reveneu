@@ -87,7 +87,9 @@ namespace Reveneu
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
-
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
             if (Reveneu.vendor_code == "A000000")
             {
                 comboBox1.Enabled = true;
@@ -161,7 +163,9 @@ namespace Reveneu
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
-
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
             if (Reveneu.vendor_code == "A000000")
             {
                 comboBox1.Enabled = true;
@@ -208,6 +212,15 @@ namespace Reveneu
 
             if (textBox5.Text == "")
                 textBox5.Text = "0";
+
+            if (textBox6.Text == "")
+                textBox6.Text = "0";
+
+            if (textBox7.Text == "")
+                textBox7.Text = "0";
+
+            if (textBox8.Text == "")
+                textBox8.Text = "0";
 
             string vendor_code = "";
             if (Reveneu.vendor_code == "A000000")
@@ -311,6 +324,36 @@ namespace Reveneu
             return ret_value;
         }
 
+        //儲存中藥資料
+        private bool Save_ChugaiMedicine(string vendor_code) {
+            bool ret_value = false;
+
+            string str_date = maskedTextBox1.Text.Replace("/", "");
+            
+                MySqlConnection conn = new MySqlConnection(connStr);
+                conn.Open();
+
+                string SQL = "";
+                SQL = "INSERT INTO TraditionalChineseMedicine VALUES ('";
+                SQL += str_date + "', '";
+                SQL += vendor_code + "', '";
+                SQL += textBox5.Text + "', '";
+                SQL += textBox6.Text + "', '";
+                SQL += textBox7.Text + "')";
+
+                MySqlCommand cmd = new MySqlCommand(SQL, conn);
+                cmd.ExecuteNonQuery();
+
+                cmd.Dispose();
+
+                conn.Close();
+                conn.Dispose();
+
+                ret_value = true;
+            
+          
+            return ret_value;
+        }
         // 儲存OTC資料
         private bool Save_OTC(string vendor_code)
         {
