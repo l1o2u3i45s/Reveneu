@@ -341,9 +341,9 @@ namespace Reveneu
                 SQL = "INSERT INTO TraditionalChineseMedicine VALUES ('";
                 SQL += str_date + "', '";
                 SQL += comboBox1.Text.Substring(0,2) + "', '";
-                SQL += textBox5.Text + "', '";
                 SQL += textBox6.Text + "', '";
-                SQL += textBox7.Text + "')";
+                SQL += textBox7.Text + "', '";
+                SQL += textBox8.Text + "')";
 
                 MySqlCommand cmd = new MySqlCommand(SQL, conn);
                 cmd.ExecuteNonQuery();
